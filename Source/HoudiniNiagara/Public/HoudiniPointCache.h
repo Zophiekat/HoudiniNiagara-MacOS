@@ -34,8 +34,7 @@
 #include "RHI.h"
 #include "RHIDefinitions.h"
 #include "RHIUtilities.h"
-#include "Runtime/Launch/Resources/Version.h"
-#include "ShaderCompiler.h"
+#include "Misc/EngineVersionComparison.h"
 #include "UObject/Object.h"
 #include "UObject/ObjectMacros.h"
 #include "UObject/UObjectGlobals.h"
@@ -417,7 +416,9 @@ class HOUDININIAGARA_API UHoudiniPointCache : public UObject
 	virtual void GetAssetRegistryTags(FAssetRegistryTagsContext Context) const override;
 #endif
 
+#if ENGINE_MAJOR_VERSION == 5 && ENGINE_MINOR_VERSION < 6
 	virtual void GetAssetRegistryTags(TArray< FAssetRegistryTag > & OutTags) const override;
+#endif
 	
 	void BeginDestroy() override;
 

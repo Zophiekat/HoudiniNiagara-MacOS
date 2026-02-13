@@ -1114,6 +1114,7 @@ UHoudiniPointCache::GetAssetRegistryTags(FAssetRegistryTagsContext Context) cons
 }
 #endif
 
+#if ENGINE_MAJOR_VERSION == 5 && ENGINE_MINOR_VERSION < 6
 void
 UHoudiniPointCache::GetAssetRegistryTags(TArray<FAssetRegistryTag> & OutTags) const
 {
@@ -1185,6 +1186,7 @@ UHoudiniPointCache::GetAssetRegistryTags(TArray<FAssetRegistryTag> & OutTags) co
 	Super::GetAssetRegistryTags( OutTags );
 	PRAGMA_ENABLE_DEPRECATION_WARNINGS;
 }
+#endif // ENGINE_MINOR_VERSION < 6
 
 void UHoudiniPointCache::BeginDestroy()
 {

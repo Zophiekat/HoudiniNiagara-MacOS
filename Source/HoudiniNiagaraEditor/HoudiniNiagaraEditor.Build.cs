@@ -28,6 +28,7 @@ public class HoudiniNiagaraEditor : ModuleRules
 	public HoudiniNiagaraEditor(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
+		bEnableUndefinedIdentifierWarnings = false;
 		
 		
 		PrivateIncludePaths.AddRange(
@@ -51,7 +52,6 @@ public class HoudiniNiagaraEditor : ModuleRules
                 "RenderCore",
                 "HoudiniNiagara",
                 "UnrealEd",
-				"EditorStyle",
 			}
         );
 			

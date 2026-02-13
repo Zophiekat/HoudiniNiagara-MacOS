@@ -14,18 +14,21 @@
 	"CanContainContent": true,
 	"IsBetaVersion": false,
 	"Installed": false,
+	"SupportedTargetPlatforms": [ "Win64", "Mac", "Linux", "IOS" ],
 
 	"Modules": 
 	[
 		{
 			"Name": "HoudiniNiagara",
 			"Type": "Runtime",
-			"LoadingPhase": "Default"
+			"LoadingPhase": "Default",
+			"PlatformAllowList": [ "Win64", "Mac", "Linux", "IOS" ]
 		},
 		{
 			"Name": "HoudiniNiagaraEditor",
 			"Type": "Editor",
-			"LoadingPhase": "Default"
+			"LoadingPhase": "Default",
+			"PlatformAllowList": [ "Win64", "Mac", "Linux" ]
 		}
 	],
 

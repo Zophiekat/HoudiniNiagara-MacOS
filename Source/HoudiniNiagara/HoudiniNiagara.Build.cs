@@ -28,6 +28,7 @@ public class HoudiniNiagara : ModuleRules
 	public HoudiniNiagara(ReadOnlyTargetRules Target) : base(Target)
 	{
         PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
+        bEnableUndefinedIdentifierWarnings = false;
 
         PrivateIncludePaths.AddRange(new string[] {
 				"HoudiniNiagara/Private",

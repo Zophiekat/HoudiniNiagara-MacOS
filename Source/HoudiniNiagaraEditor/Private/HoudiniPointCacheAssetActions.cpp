@@ -24,7 +24,7 @@
 
 #include "ToolMenus.h"
 #include "HoudiniPointCache.h"
-#include "EditorStyleSet.h"
+#include "Styling/AppStyle.h"
 #include "Toolkits/AssetEditorToolkit.h"
 #include "EditorReimportHandler.h"
 #include "HAL/FileManager.h"

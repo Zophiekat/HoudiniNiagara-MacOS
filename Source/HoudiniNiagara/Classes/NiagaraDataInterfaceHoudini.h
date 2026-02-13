@@ -28,7 +28,7 @@
 #include "NiagaraCommon.h"
 #include "NiagaraDataInterface.h"
 #include "NiagaraShared.h"
-#include "Runtime/Launch/Resources/Version.h"
+#include "Misc/EngineVersionComparison.h"
 #include "UObject/ObjectMacros.h"
 #include "VectorVM.h"
 
@@ -129,7 +129,7 @@ public:
 		SHADER_PARAMETER_SRV(Buffer<int>, SpecialAttributeIndexesBuffer)
 		SHADER_PARAMETER_SRV(Buffer<float>, SpawnTimesBuffer)
 		SHADER_PARAMETER_SRV(Buffer<float>, LifeValuesBuffer)
-		SHADER_PARAMETER_SRV(Buffer<float>, PointTypesBuffer)
+		SHADER_PARAMETER_SRV(Buffer<int>, PointTypesBuffer)
 		SHADER_PARAMETER_SRV(Buffer<int>, PointValueIndexesBuffer)
 		SHADER_PARAMETER_SRV(Buffer<uint>, FunctionIndexToAttributeIndexBuffer)
 	END_SHADER_PARAMETER_STRUCT()
